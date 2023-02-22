@@ -34,6 +34,15 @@ exports.config = {
     timeout: 100000,
   },
   waitForTimeout: 200000,
+  reporters: [
+    'dot',
+    [
+      'junit',
+      {
+        outputDir: './',
+      },
+    ],
+  ],
 };
 
 // (async () => {
