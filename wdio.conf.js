@@ -2,9 +2,10 @@ const { join } = require('path');
 // const { remote } = require('webdriverio');
 
 exports.config = {
-  hostName: 'localhost',
-  port: 4723,
-  path: '/wd/hub',
+  services: ['appium'],
+  //hostName: 'localhost',
+  // port: 4723,
+  //path: '/wd/hub',
   specs: ['./test/specs/**/*.js'],
   framework: 'mocha',
 
