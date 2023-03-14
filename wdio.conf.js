@@ -3,9 +3,12 @@ const { join } = require('path');
 
 exports.config = {
   services: ['appium'],
-  //hostName: 'localhost',
-  // port: 4723,
-  //path: '/wd/hub',
+  //services:['browserStak']
+  hostName: 'localhost',
+  port: 4723,
+  path: '/wd/hub',
+  //user: suelen_ObRQZj
+  //key:xGriwqHRn6Fr3ZW65zYg
   specs: ['./test/specs/**/*.js'],
   framework: 'mocha',
 
@@ -15,10 +18,17 @@ exports.config = {
       platformVersion: '11',
       deviceName: 'emulator-5554',
       automationName: 'UiAutomator2',
-      app: join(process.cwd(), './app/android/loja-ebac2.apk'),
+      app: join(process.cwd(), './app/android/wcandroid-12.6-Signed.apk'),
       appActivity: 'ui.main.MainActivity',
       appWaitActivity: 'ui.login.LoginActivity',
       appPackage: 'com.woocommerce.android',
+
+      //'app': bs://7edd64e7791fdcb8f8d6dff628e3066e7e169360 (id:do Renato)
+      //'device': 'Samsung Galax Note 20',
+      //'os_version': '10.0,
+      //'project': 'First NodeJS project',
+      //'build': '1',
+      //'name': 'First Name',
       // fullReset: true,
       // clearSystemFiles: true,
     },
